@@ -5,8 +5,6 @@ import brainGames.view.Game;
 import brainGames.view.Player;
 import brainGames.view.ShowMenu;
 
-import java.util.Scanner;
-
 public class MenuController {
 
     public static void showMenuWithResult() {
@@ -15,12 +13,11 @@ public class MenuController {
         Player.getPlayerName();
         ShowMenu.showMenu();
 
-        Scanner input = new Scanner(System.in);
         String userInput;
         Choice choice;
 
         do {
-            userInput = input.next();
+            userInput = Game.scanner.nextLine();
             choice = Choice.getValue(userInput);
             assert choice != null;
             switch (choice) {
