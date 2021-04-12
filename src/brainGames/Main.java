@@ -1,8 +1,6 @@
 package brainGames;
 
 import brainGames.controller.MenuController;
-import brainGames.model.Player;
-import brainGames.view.Game;
 
 public class Main {
 

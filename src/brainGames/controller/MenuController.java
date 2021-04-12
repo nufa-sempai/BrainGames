@@ -1,9 +1,8 @@
 package brainGames.controller;
 
 import brainGames.model.Choice;
-import brainGames.model.Even;
-import brainGames.view.Game;
 import brainGames.model.Player;
+import brainGames.view.Game;
 import brainGames.view.ShowMenu;
 
 public class MenuController{
@@ -20,7 +19,6 @@ public class MenuController{
             ShowMenu.showMenu();
             userInput = Game.scanner.nextLine();
             choice = Choice.getValue(userInput);
-            assert choice != null;
             switch (choice) {
                 case EVEN:
                     Even.gameEven();

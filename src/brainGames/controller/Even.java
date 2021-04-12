@@ -39,6 +39,7 @@ public class Even {
                         count = 3; }
                     break;
             }
+            //Как-то надо чтобы выводило Congratulations, "name"!
         } while (count != 3);
     }
 
