@@ -1,6 +1,7 @@
 package brainGames.controller;
 
 import brainGames.model.Choice;
+import brainGames.model.Even;
 import brainGames.view.Game;
 import brainGames.model.Player;
 import brainGames.view.ShowMenu;
