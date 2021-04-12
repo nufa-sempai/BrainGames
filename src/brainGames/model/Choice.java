@@ -2,6 +2,8 @@ package brainGames.model;
 
 public enum Choice {
 
+    YES ("yes"),
+    NO ("no"),
     EVEN("1"),
     CALC("2"),
     GCD("3"),
@@ -13,7 +15,6 @@ public enum Choice {
     Choice(String value) {
         this.value = value;
     }
-
 
     public static Choice getValue(String e) {
         for (Choice q : Choice.values()) {
