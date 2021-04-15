@@ -6,7 +6,7 @@ public class Game {
 
     public static Scanner scanner = new Scanner(System.in);
 
-    public static void getGameName() {
+    public static void printGameName() {
         System.out.println("Welcome to the Brain Games!");
     }
 }

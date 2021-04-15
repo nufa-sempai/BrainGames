@@ -4,12 +4,18 @@ import brainGames.view.Game;
 
 public class Player {
 
-    public static String playerName;
+    private String playerName;
 
-    public static void getPlayerName() {
-        System.out.println("\nMay I have your name? ");
-        playerName = Game.scanner.nextLine();
-        System.out.println("Hello, " + playerName +"\n");
+    public String getPlayerName () {
+        return playerName;
     }
 
+    public void setPlayerName() {
+        System.out.println("\nMay I have your name? ");
+        this.playerName = Game.scanner.nextLine();
+    }
+
+    public void printPlayerName() {
+        System.out.println("Hello, " + playerName +"\n");
+    }
 }

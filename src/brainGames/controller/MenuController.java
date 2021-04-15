@@ -9,8 +9,10 @@ public class MenuController{
 
     public static void showMenuWithResult() {
 
-        Game.getGameName();
-        Player.getPlayerName();
+        Game.printGameName();
+        Player player = new Player();
+        player.setPlayerName();
+        player.printPlayerName();
 
         String userInput;
         Choice choice;
@@ -24,6 +26,7 @@ public class MenuController{
                     Even.gameEven();
                     break;
                 case CALC:
+                    Calc.gameCalc();
                     break;
                 case GCD:
                     break;
