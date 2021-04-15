@@ -9,4 +9,5 @@ public class Game {
     public static void printGameName() {
         System.out.println("Welcome to the Brain Games!");
     }
+
 }

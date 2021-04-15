@@ -37,7 +37,7 @@ public class Even {
             if (point == 3) {
                 System.out.println("Congratulations, " + player.getPlayerName() + "!");
             }
-        } while (count != 3 | point != 3);
+        } while (count < 3 | point < 3);
     }
 
 //    public static void main(String[] args) {
