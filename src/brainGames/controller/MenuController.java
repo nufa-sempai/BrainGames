@@ -27,16 +27,16 @@ public class MenuController{
             choice = Choice.getValue(userInput);
             switch (choice) {
                 case EVEN:
-                    game.createGames(Choice.EVEN);
+                    game.createGames(Choice.EVEN).startGame();
                     break;
                 case CALC:
-                    game.createGames(Choice.CALC);
+                    game.createGames(Choice.CALC).startGame();
                     break;
                 case GCD:
-                    game.createGames(Choice.GCD);
+                    game.createGames(Choice.GCD).startGame();
                     break;
                 case PROGRESSION:
-                    game.createGames(Choice.PROGRESSION);
+                    game.createGames(Choice.PROGRESSION).startGame();
                     break;
                 case EXIT:
                     break;

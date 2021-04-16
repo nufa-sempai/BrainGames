@@ -4,8 +4,6 @@ import brainGames.controller.Calc;
 import brainGames.controller.Even;
 import brainGames.controller.GCD;
 import brainGames.controller.Progression;
-import brainGames.model.Choice;
-import brainGames.model.IGames;
 
 import java.util.Scanner;
 
