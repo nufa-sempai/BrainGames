@@ -1,10 +1,10 @@
 package brainGames.controller;
 
-import brainGames.model.IGamesFactory;
+import brainGames.model.IGames;
 
-public class GCD implements IGamesFactory {
+public class GCD implements IGames {
 
-    public void brainGames () {
+    public void startGame() {
 
     }
 }

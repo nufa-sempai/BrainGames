@@ -1,7 +1,5 @@
 package brainGames.model;
 
-import brainGames.view.Game;
-
 public class Player {
 
     private String playerName;

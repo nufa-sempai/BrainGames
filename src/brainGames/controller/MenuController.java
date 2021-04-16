@@ -1,9 +1,8 @@
 package brainGames.controller;
 
 import brainGames.model.Choice;
-import brainGames.model.IGamesFactory;
 import brainGames.model.Player;
-import brainGames.view.Game;
+import brainGames.model.Game;
 import brainGames.view.ShowMenu;
 
 public class MenuController{
@@ -11,10 +10,6 @@ public class MenuController{
     public void showMenuWithResult() {
 
         Game game = new Game();
-        IGamesFactory evenGame = game.gamesFactory(Choice.EVEN);
-        IGamesFactory calcGame = game.gamesFactory(Choice.CALC);
-        IGamesFactory gcdGame = game.gamesFactory(Choice.GCD);
-        IGamesFactory progressionGame = game.gamesFactory(Choice.PROGRESSION);
 
         ShowMenu showMenu = new ShowMenu();
         Player player = new Player();
@@ -32,16 +27,16 @@ public class MenuController{
             choice = Choice.getValue(userInput);
             switch (choice) {
                 case EVEN:
-                    evenGame.brainGames();
+                    game.createGames(Choice.EVEN);
                     break;
                 case CALC:
-                    calcGame.brainGames();
+                    game.createGames(Choice.CALC);
                     break;
                 case GCD:
-                    gcdGame.brainGames();
+                    game.createGames(Choice.GCD);
                     break;
                 case PROGRESSION:
-                    progressionGame.brainGames();
+                    game.createGames(Choice.PROGRESSION);
                     break;
                 case EXIT:
                     break;

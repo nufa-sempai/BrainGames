@@ -1,10 +1,10 @@
 package brainGames.controller;
 
-import brainGames.model.IGamesFactory;
+import brainGames.model.IGames;
 
-public class Progression implements IGamesFactory {
+public class Progression implements IGames {
 
-    public void brainGames() {
+    public void startGame() {
 
     }
 }

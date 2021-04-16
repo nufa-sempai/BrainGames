@@ -1,14 +1,14 @@
 package brainGames.controller;
 
 import brainGames.model.Choice;
-import brainGames.model.IGamesFactory;
+import brainGames.model.IGames;
 import brainGames.model.Player;
 import brainGames.model.Randomizer;
-import brainGames.view.Game;
+import brainGames.model.Game;
 
-public class Even implements IGamesFactory {
+public class Even implements IGames {
 
-    public void brainGames () {
+    public void startGame() {
 
         Game game = new Game();
         Randomizer rand = new Randomizer();

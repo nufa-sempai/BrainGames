@@ -1,13 +1,13 @@
 package brainGames.controller;
 
-import brainGames.model.IGamesFactory;
+import brainGames.model.IGames;
 import brainGames.model.Player;
 import brainGames.model.Randomizer;
-import brainGames.view.Game;
+import brainGames.model.Game;
 
-public class Calc implements IGamesFactory {
+public class Calc implements IGames {
 
-    public void brainGames () {
+    public void startGame() {
 
         Game game = new Game();
         Player player = new Player();
