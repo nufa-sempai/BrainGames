@@ -4,9 +4,8 @@ import java.util.Random;
 
 public class Randomizer {
 
-    public static int randomNumber () {
+    public int randomNumber (int number) {
         Random random = new Random();
-        int number = random.nextInt(100);
-        return number;
+        return random.nextInt(number);
     }
 }

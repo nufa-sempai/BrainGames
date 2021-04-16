@@ -11,8 +11,9 @@ public class Player {
     }
 
     public void setPlayerName() {
+        Game game = new Game();
         System.out.println("\nMay I have your name? ");
-        this.playerName = Game.scanner.nextLine();
+        this.playerName = game.scanner.nextLine();
     }
 
     public void printPlayerName() {

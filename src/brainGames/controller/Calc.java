@@ -1,32 +1,33 @@
 package brainGames.controller;
 
+import brainGames.model.IGamesFactory;
 import brainGames.model.Player;
 import brainGames.model.Randomizer;
 import brainGames.view.Game;
-import java.util.Random;
 
-public class Calc {
+public class Calc implements IGamesFactory {
 
-    public static void gameCalc () {
+    public void brainGames () {
 
-        Game.printGameName();
-        System.out.println("What is the result of the expression?");
+        Game game = new Game();
         Player player = new Player();
+        Randomizer rand = new Randomizer();
+        game.printGameName();
+        System.out.println("What is the result of the expression?");
         player.setPlayerName();
         player.printPlayerName();
 
         String str = "+-*";
         char[] result = str.toCharArray();
 
-        Random rand = new Random();
         int choice;
         int answer = 0;
         int point = 0;
 
         do {
-            int a = Randomizer.randomNumber();
-            int b = Randomizer.randomNumber();
-            choice = rand.nextInt(3);
+            int a = rand.randomNumber(100);
+            int b = rand.randomNumber(50);
+            choice = rand.randomNumber(3);
 
             if (result[choice] == '+') {
                 answer = a + b;
@@ -36,7 +37,7 @@ public class Calc {
                 answer = a * b;
             }
             System.out.println("Question: " + a + " " + result[choice] + " " + b);
-            int inputAnswer = Game.scanner.nextInt();
+            int inputAnswer = game.scanner.nextInt();
             System.out.println("Your answer: " + inputAnswer);
             if (inputAnswer == answer) {
                 System.out.println("Correct! The answer was: " + answer);
@@ -44,8 +45,9 @@ public class Calc {
             } else {
                 System.out.println(inputAnswer + " is wrong answer ;( . Correct answer was " + answer);
                 System.out.println("Lets try again, " + player.getPlayerName());
+                point = 5;
             }
-        } while (point != 3);
+        } while (point < 3);
     }
 
 //    public static void main(String[] args) {

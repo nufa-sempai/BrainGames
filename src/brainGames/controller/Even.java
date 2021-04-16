@@ -1,43 +1,43 @@
 package brainGames.controller;
 
 import brainGames.model.Choice;
+import brainGames.model.IGamesFactory;
 import brainGames.model.Player;
 import brainGames.model.Randomizer;
 import brainGames.view.Game;
 
-public class Even {
+public class Even implements IGamesFactory {
 
-    public static void gameEven () {
+    public void brainGames () {
 
-        Game.printGameName();
+        Game game = new Game();
+        Randomizer rand = new Randomizer();
+        game.printGameName();
         System.out.println("Answer \"yes\" if number even otherwise \"no\".");
         Player player = new Player();
         player.setPlayerName();
         player.printPlayerName();
 
         String userInput;
-        int count = 0;
         int point = 0;
 
         do {
-            int number = Randomizer.randomNumber();
+            int number = rand.randomNumber(100);
             System.out.println("Question: " + number);
-            userInput = Game.scanner.nextLine();
+            userInput = game.scanner.nextLine();
             if (number % 2 == 0 && userInput.equals(Choice.YES.value)) {
                 System.out.println("Correct!!");
                 point++;
-//                System.out.println(point);
             } else if (number % 2 != 0 && userInput.equals(Choice.NO.value)) {
                 System.out.println("Correct!!");
                 point++;
-//                System.out.println(point);
             } else {
                 System.out.println("Lets try again, " + player.getPlayerName());
-                count = 3; }
+                point = 5; }
             if (point == 3) {
                 System.out.println("Congratulations, " + player.getPlayerName() + "!");
             }
-        } while (count < 3 | point < 3);
+        } while (point < 3);
     }
 
 //    public static void main(String[] args) {

@@ -2,7 +2,7 @@ package brainGames.view;
 
 public class ShowMenu {
 
-    public static void showMenu() {
+    public void showMenu() {
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Even");
         System.out.println("2 - Calc");
