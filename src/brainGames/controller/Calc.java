@@ -12,6 +12,7 @@ public class Calc implements IGames {
         Game game = new Game();
         Player player = new Player();
         Randomizer rand = new Randomizer();
+
         game.printGameName();
         System.out.println("What is the result of the expression?");
         player.setPlayerName();

@@ -15,6 +15,7 @@ public class Player {
     }
 
     public void printPlayerName() {
-        System.out.println("Hello, " + playerName +"\n");
+        System.out.println("Hello, " + playerName + "\n");
     }
 }
+
